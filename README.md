@@ -5,6 +5,7 @@ Proyek ini adalah sistem e-commerce berbasis microservices dengan Spring Boot ya
    Docker terinstal
    
    Minikube atau cluster Kubernetes lain
+   
    kubectl terkonfigurasi
    
    Maven (untuk build service Java)  
