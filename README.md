@@ -115,7 +115,6 @@ kubectl apply -f <file-service.yaml>
   ├── order-service.yaml
   
   ├── customer-service.yaml
-  
   └── api-gateway.yaml   
 
 
