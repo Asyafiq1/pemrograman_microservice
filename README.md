@@ -11,45 +11,45 @@ Proyek ini adalah sistem e-commerce berbasis microservices dengan Spring Boot ya
    Maven (untuk build service Java)  
 
 🛠️ Persiapan & Deploy
-1. Mulai Minikube Cluster
+1.Mulai Minikube Cluster
 
-   minikube start --driver=docker  
+   minikube start --driver=docker
    
-3. Build & Push Docker Image
+2.Build & Push Docker Image
    
-   Lakukan untuk setiap microservice (product, payment, order, customer):  
+   Lakukan untuk setiap microservice (product, payment, order, customer):
 
-# Build image Docker
+#Build image Docker
 
   docker build -t <username-dockerhub>/<nama-service>:1.0.0 .  
 
-# Push ke Docker Hub
+#Push ke Docker Hub
 
   docker push <username-dockerhub>/<nama-service>:1.0.0  
 
-3. Deploy ke Kubernetes
-4. 
+3.Deploy ke Kubernetes
+   
    Jalankan file Kubernetes secara berurutan:  
 
-# Deploy Eureka (Service Discovery)
+#Deploy Eureka (Service Discovery)
 
   kubectl apply -f eureka-deployment.yaml
   
   kubectl apply -f eureka-service.yaml  
 
-# Deploy Database (MySQL)
+#Deploy Database (MySQL)
 
   kubectl apply -f mysql-deployment.yaml
   
   kubectl apply -f mysql-service.yaml  
 
-# Deploy Message Broker (RabbitMQ)
+#Deploy Message Broker (RabbitMQ)
 
   kubectl apply -f rabbitmq-deployment.yaml
   
   kubectl apply -f rabbitmq-service.yaml  
 
-# Deploy Microservices
+#Deploy Microservices
 
   kubectl apply -f product-service.yaml
   
@@ -59,11 +59,11 @@ Proyek ini adalah sistem e-commerce berbasis microservices dengan Spring Boot ya
   
   kubectl apply -f customer-service.yaml  
 
-# Deploy API Gateway (Spring Cloud Gateway)
+#Deploy API Gateway (Spring Cloud Gateway)
 
   kubectl apply -f api-gateway.yaml  
 
-4. Verifikasi Deploy
+4.Verifikasi Deploy
    
   Cek status pod:
   
@@ -83,15 +83,15 @@ Proyek ini adalah sistem e-commerce berbasis microservices dengan Spring Boot ya
 
 Jika service error:
 
-# Cek log
+#Cek log
 
 kubectl logs <nama-pod>  
 
-# Deskripsi masalah pod
+#Deskripsi masalah pod
 
 kubectl describe pod <nama-pod>  
 
-# Redeploy jika perlu
+#Redeploy jika perlu
 
 kubectl delete -f <file-service.yaml>
 
