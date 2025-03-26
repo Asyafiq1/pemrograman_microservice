@@ -1,9 +1,12 @@
 Proyek ini adalah sistem e-commerce berbasis microservices dengan Spring Boot yang di-deploy di Kubernetes. Langkah-langkah untuk menjalankannya.  
 
-⚙️ Prasyarat
+⚙️ Prasyarat  
+
    Docker terinstal
+   
    Minikube atau cluster Kubernetes lain
    kubectl terkonfigurasi
+   
    Maven (untuk build service Java)  
 
 🛠️ Persiapan & Deploy
